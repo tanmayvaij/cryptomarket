@@ -12,7 +12,7 @@ export class AppComponent {
 
   coinsList: any = []
   
-  constructor( cryptoData: CryptoDataService) { 
+  constructor(cryptoData: CryptoDataService) { 
 
     cryptoData.getCoins("inr", 1).subscribe((data) => {
       this.coinsList = data

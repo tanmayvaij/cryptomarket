@@ -1,1 +1,35 @@
-<!-- <h1>{{ title }}</h1> -->
+<!-- <div>
+    <div *ngFor="let coin of coinsList">
+
+        <div class="flex items-center justify-between border px-7 p-2">
+            <img class="w-20" src="{{ coin.image }}" alt="">
+            <h3>{{ coin.symbol }}</h3>
+            <h2>{{ coin.name }}</h2> 
+        </div>
+
+    </div>
+</div> -->
+
+<table class="border w-full">
+
+    <thead class="border">
+        <th class="border p-3"></th>
+        <th class="border p-3">Symbol</th>
+        <th class="border p-3">Name</th>
+        <th class="border p-3">Change</th>
+    </thead>
+
+    <tbody>
+
+        <tr class="border" *ngFor="let coin of coinsList">
+            <td class="border p-3">
+                <img class="w-16" src="{{ coin.image }}" alt="">
+            </td>
+            <td class="border p-3">{{ coin.symbol | uppercase }}</td>
+            <td class="border p-3">{{ coin.name }}</td>
+            <td class="border p-3">{{ coin.market_cap_change_percentage_24h }}</td>
+        </tr>
+
+    </tbody>
+
+</table>
