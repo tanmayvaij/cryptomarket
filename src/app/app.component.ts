@@ -14,7 +14,10 @@ export class AppComponent {
   
   constructor(cryptoData: CryptoDataService) { 
 
-    cryptoData.getCoins("inr", 1).subscribe((data) => this.coinsList = data)
+    cryptoData.getCoins("inr", 1).subscribe((data) => {
+      this.coinsList = data
+      console.log(this.coinsList)
+    })
 
   }
 

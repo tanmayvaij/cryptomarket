@@ -16,7 +16,7 @@
             </td>
 
             <td class="border p-3">{{ coin.symbol | uppercase }}</td>
-            
+
             <td class="border p-3">{{ coin.name }}</td>
             
             <div *ngIf="coin.market_cap_change_percentage_24h > 0; then ifBlock else elseBlock"></div>
@@ -29,6 +29,8 @@
             </ng-template>
 
         </tr>
+
+        
 
     </tbody>
 
