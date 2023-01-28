@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid *ngFor="let coin of cryptoObjectsArray">
+
+    <ion-row>
+      <ion-col>
+        <img alt="coin image" width="50px" src="{{coin.image}}" />
+      </ion-col>
+      <ion-col>{{coin.name}}</ion-col>
+      <ion-col>{{coin.current_price}}</ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>
