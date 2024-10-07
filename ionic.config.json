@@ -1,7 +1,0 @@
-{
-  "name": "cryptora",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react"
-}
